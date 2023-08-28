@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', 'Arial Narrow', Arial, sans-serif;
+}
+
+.calculadora{
+    background-color: #212121;
+    width: 360px;
+    height: 560px;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: hidden;
+}
+
+.resultado{
+    width: 100%;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.resultado #display{
+    width: 100%;
+    text-align: right;
+    padding: 15px;
+    font-size: 1.8em;
+    font-family: 'Poppins', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    color: #838383;
+    background-color: #212121;
+    border: 0;
+}
+::placeholder{
+    color: #494949;
+}
+
+.resultado #operacion{
+    width: 100%;
+    text-align: right;
+    padding: 5px 15px 0;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Poppins', 'Arial Narrow', Arial, sans-serif;
+    background-color: #212121;
+    border: 0;
+    color: #c5c4c4;
+}
+
+.teclas{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    height: calc(100% - 230px);
+    background-color: #212121;
+    overflow: hidden;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    gap: 3px;
+
+}
+
+.teclas .boton, .teclas .operador{
+    background-color: #131313;
+    border: 0;
+    color: aliceblue;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.teclas .boton:hover, .teclas .operador:hover{
+    background-color: #2d3436;
+    cursor: pointer;
+}
+
+#igual{
+    grid-column: 4/-1;
+    grid-row: 4/-1;
+    background-color: #34ace0;
+    font-size: 2em;
+}
+#igual:hover{
+    grid-column: 4/-1;
+    grid-row: 4/-1;
+    background-color: #70bedf;
+}
+#atras{
+    color: #ff5252;
+    font-weight: bold;
+}
+#borrar{
+    background-color: #ff5252;
+}
+#borrar:hover{
+    background-color: #f77575;
+}
+#dividir, #multiplicar, #restar, #sumar, #porcentaje{
+    color: #ffda79;
+}
+#dividir, #multiplicar, #restar, #sumar, #atras{
+    background-color: rgb(10, 10, 10);
+}
+#dividir:hover, #multiplicar:hover, #restar:hover, #sumar:hover, #atras:hover{
+    background-color: #131313;
+}
+.nombre{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    padding: 15px;
+    font-family: 'Poppins';
+    font-size: 1.2em;
+    color: #34ace0;
+    font-weight: 600;
+    letter-spacing: 5px
+}
